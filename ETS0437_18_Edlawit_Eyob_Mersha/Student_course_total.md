@@ -1,4 +1,4 @@
-Task: Student Course Total
+ Student Course Total
 
 1. Input
 
