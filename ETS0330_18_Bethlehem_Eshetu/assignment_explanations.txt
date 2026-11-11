@@ -1,0 +1,144 @@
+FUNDAMENTALS OF PROGRAMMING I
+Chapter 2: Basic Programming Constructs
+Practical Exercises
+
+Name: Bethlehem Eshetu
+ID: ETS0330/18
+
+==================================================
+TASK 1: STUDENT COURSE TOTAL
+==================================================
+
+Question:
+Write a C++ program that reads a student's assignment, midterm and final marks (each out of 100). The course total is 20% assignment + 30% midterm + 50% final. The pass mark is 50. Print the total (one decimal place) and the word Pass or Fail. Use the conditional operator (no if).
+
+A. Inputs:
+- Assignment mark
+- Midterm mark
+- Final exam mark
+
+Outputs:
+- Course total
+- Pass or Fail
+
+B. Process:
+1. Read the assignment, midterm and final marks.
+2. Multiply the assignment mark by 0.20.
+3. Multiply the midterm mark by 0.30.
+4. Multiply the final mark by 0.50.
+5. Add the three values to get the course total.
+6. Use the conditional operator to display Pass if the total is 50 or above; otherwise display Fail.
+7. Display the total to one decimal place.
+
+C. Formula:
+Total = (Assignment * 0.20) + (Midterm * 0.30) + (Final * 0.50)
+
+D. Test data:
+Input: 80, 60, 70
+Expected total: 69.0
+Expected result: Pass
+
+Input: 40, 30, 45
+Expected total: 39.5
+Expected result: Fail
+
+The program is saved in task1.cpp.
+
+==================================================
+TASK 2: ELECTRICITY BILL
+==================================================
+
+Question:
+Write a C++ program that reads the electricity units (kWh, a whole number) used in a month. The first 50 units cost 1.50 birr each and every unit above 50 costs 2.00 birr. A fixed service charge of 10 birr is added. Print the energy charge, the service charge and the total bill (two decimals). Use the conditional operator (no if).
+
+A. Inputs:
+- Electricity units used
+
+Outputs:
+- Energy charge
+- Service charge
+- Total bill
+
+B. Process:
+1. Read the number of electricity units.
+2. If the units are 50 or less, multiply the units by 1.50.
+3. If the units are above 50, calculate the first 50 units at 1.50 birr and the remaining units at 2.00 birr. The program makes this choice using the conditional operator.
+4. Add the fixed service charge of 10 birr.
+5. Display the energy charge, service charge and total bill to two decimal places.
+
+C. Formula:
+For 50 units or less:
+Energy charge = Units * 1.50
+
+For more than 50 units:
+Energy charge = (50 * 1.50) + ((Units - 50) * 2.00)
+
+Total bill = Energy charge + 10
+
+D. Test data:
+Input: 80 units
+Expected energy charge: 135.00 birr
+Expected total bill: 145.00 birr
+
+Input: 30 units
+Expected energy charge: 45.00 birr
+Expected total bill: 55.00 birr
+
+The program is saved in task2.cpp.
+
+==================================================
+TASK 3: TRIP SPEED AND FUEL COST
+==================================================
+
+Question:
+Write a C++ program that reads the distance of a trip in km, the travel time as hours and minutes (whole numbers), the car's fuel use in liters per 100 km and the price per liter (birr). Print the average speed (km/h), the fuel used (liters) and the fuel cost (birr), each with two decimals.
+
+A. Inputs:
+- Trip distance in kilometers
+- Travel time in hours
+- Additional travel time in minutes
+- Fuel use in liters per 100 km
+- Fuel price per liter
+
+Outputs:
+- Average speed in km/h
+- Fuel used in liters
+- Fuel cost in birr
+
+B. Process:
+1. Read the trip distance.
+2. Read the travel time in hours and minutes.
+3. Read the fuel use and price per liter.
+4. Convert minutes to hours by dividing by 60.0, then add the hours.
+5. Divide the distance by the total time to get average speed.
+6. Multiply the distance by fuel use and divide by 100 to calculate fuel used.
+7. Multiply fuel used by the price per liter to calculate fuel cost.
+8. Display the three answers to two decimal places.
+
+C. Formulas:
+Total time = Hours + (Minutes / 60.0)
+Average speed = Distance / Total time
+Fuel used = (Distance * Fuel use) / 100
+Fuel cost = Fuel used * Fuel price
+
+D. Test data:
+Input: 150 km, 2 hours, 30 minutes, 8 liters per 100 km, 60 birr per liter
+Expected average speed: 60.00 km/h
+Expected fuel used: 12.00 liters
+Expected fuel cost: 720.00 birr
+
+The program is saved in task3.cpp.
+
+==================================================
+SHORT NOTES
+==================================================
+
+- int is used for whole numbers.
+- double is used for numbers that can have decimal values.
+- cin is used to get input from the user.
+- cout is used to display output.
+- The conditional operator (?:) chooses one of two values depending on a condition.
+- fixed and setprecision(2) display two digits after the decimal point.
+- In Task 3, 60.0 is used when converting minutes to hours so that the division gives a decimal result.
+
+All three programs use the Chapter 2 concepts. They do not use if statements or loops.
