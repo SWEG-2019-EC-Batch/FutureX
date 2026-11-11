@@ -12,25 +12,77 @@ int main() {
 
     // Declare variables
     double assignment, midterm, finalExam;
+    double assignmentScore, midtermScore, finalScore;
     double total;
     string result;
 
-    // Read input
-    cout << "Enter assignment, midterm and final marks: ";
-    cin >> assignment >> midterm >> finalExam;
+    //  Welcome message
+    cout << "========================================" << endl;
+    cout << "        STUDENT COURSE RESULT SYSTEM     " << endl;
+    cout << "========================================" << endl;
+
+    cout << "\nPlease enter your examination marks." << endl;
+
+    cout << "Assignment mark (out of 100): ";
+    cin >> assignment;
+
+    cout << "Midterm mark (out of 100): ";
+    cin >> midterm;
+
+    cout << "Final exam mark (out of 100): ";
+    cin >> finalExam;
 
     // Calculate total course mark
-    total = (assignment * ASSIGNMENT_WEIGHT)
-          + (midterm * MIDTERM_WEIGHT)
-          + (finalExam * FINAL_WEIGHT);
+assignmentScore = assignment * ASSIGNMENT_WEIGHT;
+    midtermScore = midterm * MIDTERM_WEIGHT;
+    finalScore = finalExam * FINAL_WEIGHT;
+    
+    total = assignmentScore + midtermScore + finalScore;
 
     // Determine Pass or Fail using conditional operator
     result = (total >= PASS_MARK) ? "Pass" : "Fail";
 
-    // Display output
+    // Display student report
     cout << fixed << setprecision(1);
-    cout << "Total mark: " << total << endl;
-    cout << "Result: " << result << endl;
+    
+     cout << "\n\n";
+    cout << "========================================" << endl;
+    cout << "             STUDENT REPORT             " << endl;
+    cout << "========================================" << endl;
+
+    cout << left << setw(25) << "Assessment"
+         << right << setw(10) << "Mark"
+         << setw(12) << "Weighted" << endl;
+
+    cout << "----------------------------------------" << endl;
+
+    cout << left << setw(25) << "Assignment (20%)"
+         << right << setw(10) << assignment
+         << setw(12) << assignmentScore << endl;
+
+    cout << left << setw(25) << "Midterm (30%)"
+         << right << setw(10) << midterm
+         << setw(12) << midtermScore << endl;
+
+    cout << left << setw(25) << "Final Exam (50%)"
+         << right << setw(10) << finalExam
+         << setw(12) << finalScore << endl;
+
+    cout << "----------------------------------------" << endl;
+
+    cout << left << setw(25) << "TOTAL COURSE MARK:"
+         << right << setw(22) << total << endl;
+
+    cout << left << setw(25) << "Minimum pass mark:"
+         << right << setw(22) << PASS_MARK << endl;
+
+    cout << "========================================" << endl;
+
+    cout << "FINAL RESULT: " << result << endl;
+
+    cout << "========================================" << endl;
+
+    cout << "\nThank you for using the Student Result System!" << endl;
 
     return 0;
 }
